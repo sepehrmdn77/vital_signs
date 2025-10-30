@@ -63,7 +63,7 @@ app.add_middleware(
 
 @app.exception_handler(Excp)
 async def http_exception_handler(request: Request, exc: Excp):
-    """Defining the desired exception handler"""
+    """Defining the exception handler"""
     print(f"HTTPException occurred: {exc.status_code} - {exc.detail}")
     error_response = {
         "error": True,
